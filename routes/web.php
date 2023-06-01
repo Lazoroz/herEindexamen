@@ -3,6 +3,7 @@
 use App\Http\Controllers\InschrijvingController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'index'])->name('/');
 
 Route::resource('inschrijving', InschrijvingController::class)
         ->except(['show', 'create', 'store'])->middleware('auth');

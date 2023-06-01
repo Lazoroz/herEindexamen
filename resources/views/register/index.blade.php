@@ -8,11 +8,11 @@
             <x-input-error :messages="$errors->get('naam')" class="mt-2" />
 
             <x-input-label for="telefoon" :value="__('Telefoon')" />
-            <x-text-input id="tele" class="block mt-1 w-full" type="number" name="telefoon" required  /> 
+            <x-text-input id="telefoon" class="block mt-1 w-full" type="number" name="telefoon"  required  /> 
             <x-input-error :messages="$errors->get('telefoon')" class="mt-2" />
 
             <x-input-label for="adres" :value="__('Adress')" />
-            <x-text-input id="adres" class="block mt-1 w-full" type="text" name="adres" required  /> 
+            <x-text-input id="adres" class="block mt-1 w-full" type="text" name="adres" max="10"  required  /> 
             <x-input-error :messages="$errors->get('adress')" class="mt-2" />
 
             <x-input-label for="woonplaats" :value="__('Woonplaats')" />
@@ -24,7 +24,7 @@
             <x-input-error :messages="$errors->get('geboortedatum')" class="mt-2" />
 
             <x-input-label for="geslacht" :value="__('Geslacht')" />
-            <select id="geslacht" name="geslacht" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            <select id="geslacht" name="geslacht" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
             <option selected></option>
             <option value="man">Man</option>
             <option value="vrouw">Vrouw</option>
@@ -47,7 +47,7 @@
 
             <div class="mt-4 space-x-2">
                 <x-primary-button type="submit">{{ __('Save') }}</x-primary-button>
-                <a href="{{ route('inschrijving.index') }}">{{ __('Cancel') }}</a>
+                <a href="{{ route('/') }}">{{ __('Cancel') }}</a>
             </div>
             
         </form>

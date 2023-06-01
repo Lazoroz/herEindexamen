@@ -15,13 +15,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen" style="background: url('https://glr.cms.araweb.nl/sites/default/files/assets/images/2022/GLR%20Brochure%2023-24%20-%20VMBO%20Wu%20web.jpg')">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class="bg-green shadow">
+                    <div class=" mt-3 my-6 mx-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>

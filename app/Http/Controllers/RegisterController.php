@@ -9,11 +9,10 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Hash;
 
 
-
 class RegisterController extends Controller
 {
     /**
-     * Show the form for creating a new resource.
+     * Toon het formulier voor het maken van een nieuwe bron.
      */
     public function create()
     {
@@ -21,7 +20,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Bewaar een nieuw gemaakte bron in opslag.
      */
     public function store(Request $request): RedirectResponse
     {
@@ -33,7 +32,7 @@ class RegisterController extends Controller
             'geboortedatum' => 'required|date',
             'geslacht' => 'required',
             'email' => ['required', 'unique:'.User::class],
-            'password' => ['required'],
+            'password' => ['required', \Illuminate\Validation\Rules\Password::defaults()],
         ]);
 
         $user = User::create([

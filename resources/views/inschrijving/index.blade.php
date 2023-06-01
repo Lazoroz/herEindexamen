@@ -1,10 +1,10 @@
 <x-app-layout>
 
-    <div class="max-w-7xl mx-auto pt-6 sm:px-6 lg:px-8 bg-white overflow-auto shadow-sm rounded-lg">
+    <div class="mt-3 mx-2 min-h-5 overflow-hidden sm:rounded-lg bg-white shadow-sm rounded-lg">
 
         @foreach ($inschrijving as $m)
 
-        <div class="p-6 flex flex-col space-x-2 max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="p-6 space-x-2 max-w-s rounded shadow-lg">
 
           <div>
               <div class="px-4 sm:px-0">

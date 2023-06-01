@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class InschrijvingController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Geef een lijst van de bron weer.
      */
     public function index()
     {
@@ -50,7 +50,7 @@ class InschrijvingController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Verwijder de opgegeven bron uit de opslag.
      */
     public function destroy(Inschrijving $inschrijving)
     {

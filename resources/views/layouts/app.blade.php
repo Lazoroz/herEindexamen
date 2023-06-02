@@ -13,24 +13,26 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen" style="background: url('https://glr.cms.araweb.nl/sites/default/files/assets/images/2022/GLR%20Brochure%2023-24%20-%20VMBO%20Wu%20web.jpg')">
+    {{-- <body class="font-sans antialiased"> --}}
+    <body class="h-full w-full bg-no-repeat bg-cover font-sans antialiased" style="background: url('https://glr.cms.araweb.nl/sites/default/files/assets/images/2022/GLR%20Brochure%2023-24%20-%20VMBO%20Wu%20web.jpg'); ">
+        <div>  
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-green shadow">
-                    <div class=" mt-3 my-6 mx-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+                <!-- Page Heading -->
+                @if (isset($header))
+                    <header class="bg-green shadow">
+                        <div class=" mt-3 my-6 mx-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
         </div>
     </body>
 </html>

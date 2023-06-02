@@ -15,7 +15,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
-    <body class="font-sans imgage text-gray-900 antialiased bg-cover"
+    <body class="font-sans imgage text-gray-900 antialiased bg-cover bg-no-repeat"
           style="background-image: url('https://freight.cargo.site/t/original/i/c87ec5c6b83476f0cc2139a63d81d5ed7bff1846e8d05eedda905b845305b757/GLR-Spread-Mediatechnologie-Final-LQ.jpg');">
         
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">

@@ -10,18 +10,17 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $EndDate = Carbon::now()->addHours(9);
-        $nowDate = Carbon::now();
+        $EndDate = Carbon::createFromFormat('m/d/Y H:i:s', '06/02/2023 09:30:00', 'Europe/Amsterdam');
+        $nowDate = Carbon::now('Europe/Amsterdam');
 
         // VERANDER HET NOG NAAR GT!!!
-        $result = $nowDate->lt($EndDate);
+        $result = $nowDate->gte($EndDate);
 
         $count = inschrijving::with('user')->count();
-
-        print_r($count);
+       
         
         return view('welcome', [
-            'isTime' => $result,
+            'EindDatum' => $result,
             'count' => $count,
         ]);
     }
